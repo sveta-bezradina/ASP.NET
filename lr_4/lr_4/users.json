@@ -1,0 +1,39 @@
+{
+  "Users": {
+    "User1": {
+      "Id": 0,
+      "Name": "Svitlana",
+      "Age": 19
+    },
+    "User2": {
+      "Id": 1,
+      "Name": "Ivan",
+      "Age": 19
+    },
+    "User3": {
+      "Id": 2,
+      "Name": "Vlad",
+      "Age": 19
+    },
+    "User4": {
+      "Id": 3,
+      "Name": "Katerina",
+      "Age": 19
+    },
+    "User5": {
+      "Id": 4,
+      "Name": "Oleg",
+      "Age": 19
+    },
+    "User6": {
+      "Id": 5,
+      "Name": "Misha",
+      "Age": 19
+    }
+  },
+  "CurrentUser": {
+    "Id": 0,
+    "Name": "Current User",
+    "Age": "0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Books": [
+    {
+      "Name": "The Great Gatsby",
+      "Price": 100
+    },
+    {
+      "Name": "To Kill a Mockingbird",
+      "Price": 150
+    }
+  ]
+}

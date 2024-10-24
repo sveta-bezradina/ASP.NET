@@ -1,0 +1,17 @@
+﻿@model Lr_5_mvc_.Models.FormModel
+
+<h2>Введіть значення</h2>
+
+<form asp-controller="Form" asp-action="Submit" method="post">
+    <div>
+        <label for="value">Введіть значення:</label>
+        <input type="text" id="value" name="Value" asp-for="Value" required />
+    </div>
+
+    <div>
+        <label for="expiryDate">Введіть дату та час старіння(майбутнє):</label>
+        <input type="datetime-local" id="expiryDate" name="ExpiryDate" asp-for="ExpiryDate" required />
+    </div>
+
+    <button type="submit">Зберегти</button>
+</form>

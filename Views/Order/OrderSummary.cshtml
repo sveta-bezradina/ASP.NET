@@ -1,0 +1,21 @@
+﻿@model List<lr_6.Models.Product>
+
+<h2>Ваше замовлення:</h2>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            @product.Name -
+            @(product.Size == "Small" ? "Маленька" :
+                product.Size == "Medium" ? "Середня" :
+                product.Size == "Large" ? "Велика" : product.Size)
+            розмір з коржем
+            @(product.CrustType == "Thin" ? "Тонкий" :
+                product.CrustType == "Thick" ? "Товстий" :
+                product.CrustType == "Cheese" ? "Сирний" : product.CrustType)
+        </li>
+    }
+</ul>
+
+<a href="@Url.Action("Register", "Order")">Повернутися до реєстрації</a>

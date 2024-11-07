@@ -1,0 +1,38 @@
+﻿@model List<lr_8.Models.Product>
+
+	<h2>
+		Список продуктів
+	</h2>
+
+	<ul>
+		@foreach (var product in Model)
+		{
+			<li>@product.Id. @product.Name - @product.Price$ (@product.CreateDate.ToShortDateString())</li>
+		}
+	</ul>
+
+	<h2>
+		Таблиця продуктів
+	</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+			<th>ID</th>
+			<th>Назва</th>
+			<th>Ціна</th>
+			<th>Дата створення</th>
+		</tr>
+		</thead>
+		<tbody>
+			@foreach (var product in Model)
+			{
+				<tr>
+					<td>@product.Id</td>
+					<td>@product.Name</td>
+					<td>@product.Price$</td>
+					<td>@product.CreateDate.ToShortDateString()</td>
+				</tr>
+			}
+		</tbody>
+	</table>

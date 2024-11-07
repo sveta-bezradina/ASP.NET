@@ -1,0 +1,25 @@
+﻿
+@model List<lr_6.Models.Product>
+<form asp-action="OrderProducts" method="post">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <label>Назва товару:</label>
+        <input asp-for="@Model[i].Name" />
+        <label>Розмір піци:</label>
+        <select asp-for="@Model[i].Size">
+            <option value="Small">Маленька</option>
+            <option value="Medium">Середня</option>
+            <option value="Large">Велика</option>
+        </select>
+
+        <label>Тип коржа:</label>
+        <select asp-for="@Model[i].CrustType">
+            <option value="Thin">Тонкий</option>
+            <option value="Thick">Товстий</option>
+            <option value="Cheese">Сирний</option>
+        </select>
+        <hr />
+    }
+    <button type="submit">Підтвердити замовлення</button>
+</form>
+

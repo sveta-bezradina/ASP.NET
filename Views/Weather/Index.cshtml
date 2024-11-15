@@ -1,0 +1,24 @@
+﻿@model lr_9.Models.WeatherModel
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<h1>Погода</h1>
+
+<form method="post">
+    <input type="text" name="city" placeholder="Введіть місто" />
+    <button type="submit">Отримати інформацію</button>
+</form>
+
+@if (ViewData["Error"] != null)
+{
+    <p style="color: red">@ViewData["Error"]</p>
+}
+
+@if (Model != null)
+{
+    <h2>Погода в @Model.Name</h2>
+    <p><strong>Температура:</strong> @Model.Main.Temp °C</p>
+    <p><strong>Вологість:</strong> @Model.Main.Humidity %</p>
+    <p><strong>Опис:</strong> @Model.Weather[0].Description</p>
+}

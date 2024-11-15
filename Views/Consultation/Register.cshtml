@@ -1,0 +1,41 @@
+﻿@model RegistrationViewModel
+
+<form asp-action="Register" method="post">
+    <div>
+        <label for="FullName">Ім'я та прізвище</label>
+        <input type="text" id="FullName" name="FullName" asp-for="FullName" />
+        <span asp-validation-for="FullName"></span>
+    </div>
+
+    <div>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label for="ConsultationDate">Бажана дата консультації</label>
+        <input type="date" id="ConsultationDate" name="ConsultationDate" asp-for="ConsultationDate" />
+        <span asp-validation-for="ConsultationDate"></span>
+    </div>
+
+    <div>
+        <label for="Product">Продукт</label>
+        <select id="Product" name="Product" asp-for="Product">
+            <option value="JavaScript">JavaScript</option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Основи">Основи</option>
+        </select>
+        <span asp-validation-for="Product"></span>
+    </div>
+
+    <button type="submit">Реєстрація</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
